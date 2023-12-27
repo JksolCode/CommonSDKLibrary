@@ -3,7 +3,6 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.android.library'
     id 'kotlin-kapt'
-    id 'maven-publish'
 }
 
 android {
@@ -68,6 +67,8 @@ dependencies {
     implementation('com.github.AperoVN:AperoModuleAds:5.5.6-alpha02'){
         exclude group: 'com.google.android.gms', module: 'play-services-ads'
         exclude group: 'com.applovin', module: 'play-services-ads'
+        exclude group: 'com.appsflyer'
+        exclude group: 'com.ironsource.sdk'
     }
 
     implementation 'com.google.android.play:app-update:2.1.0'

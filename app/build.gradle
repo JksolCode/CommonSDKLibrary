@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-
+//    id 'maven-publish'
 }
 
 android {
@@ -18,6 +18,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,6 +34,17 @@ android {
     }
 }
 
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            groupId = 'com.github.JksolCode'
+//            artifactId = 'CommonSDKLibrary'
+//            version = '1.0.0'
+//
+////            from components.java
+//        }
+//    }
+//}
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -42,4 +54,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation project(":jksolcommonsdk")
 }
