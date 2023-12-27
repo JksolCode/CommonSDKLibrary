@@ -1,0 +1,90 @@
+plugins {
+//    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.android.library'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+}
+
+android {
+    compileSdk 33
+    namespace 'com.example.jksolads'
+    defaultConfig {
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //Admob Ads
+    implementation 'com.google.android.gms:play-services-ads:22.3.0'
+    implementation 'com.google.android.ump:user-messaging-platform:2.1.0'
+
+    //AppOpen Ads
+    def lifecycle_version = '2.3.1'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    //Shimmer Effect
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //sdp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // AppMetrica SDK.
+    implementation 'com.yandex.android:mobmetricalib:5.3.0'
+
+    implementation('com.github.AperoVN:AperoModuleAds:5.5.6-alpha02'){
+        exclude group: 'com.google.android.gms', module: 'play-services-ads'
+        exclude group: 'com.applovin', module: 'play-services-ads'
+    }
+
+    implementation 'com.google.android.play:app-update:2.1.0'
+
+    implementation 'com.onesignal:OneSignal:5.0.4'
+
+    implementation 'org.jsoup:jsoup:1.14.2'
+
+    // Applovin SDK
+    implementation 'com.applovin:applovin-sdk:12.1.0'
+
+    //Facebook Mediation
+    implementation 'com.google.ads.mediation:facebook:6.16.0.0'
+
+    //Applovin Mediation
+    implementation 'com.google.ads.mediation:applovin:11.11.3.0'
+
+    //Firebase remoteConfig
+    implementation 'com.google.firebase:firebase-config-ktx:21.6.0'
+}
