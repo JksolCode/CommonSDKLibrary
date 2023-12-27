@@ -1,5 +1,5 @@
-Installation
-Step 1. Add the JitPack repository to your build file
+**Installation**
+**Step 1. Add the JitPack repository to your build file**
 
 allprojects {
   repositories {
@@ -7,7 +7,8 @@ allprojects {
     maven { url 'https://jitpack.io' }
   }
 }
-Step 2. Add the dependency
+
+**Step 2. Add the dependency**
 
 dependencies {
   implementation 'implementation 'com.github.JksolCode:CommonSDKLibrary:1.0.0'
