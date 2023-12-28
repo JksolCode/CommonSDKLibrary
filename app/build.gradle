@@ -41,7 +41,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifactId = 'jksolcommonsdk'
-//            from components.java
+            from components.findByName('release')
             versionMapping {
                 usage('java-api') {
                     fromResolutionOf('runtimeClasspath')
