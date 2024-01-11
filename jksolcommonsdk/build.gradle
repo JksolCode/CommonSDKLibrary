@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.android.library'
     id 'kotlin-kapt'
+    id 'maven-publish'
 }
 
 android {
@@ -88,4 +89,16 @@ dependencies {
 
     //Firebase remoteConfig
     implementation 'com.google.firebase:firebase-config-ktx:21.6.0'
+}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.JksolCode'
+                artifactId = 'CommonSDKLibrary'
+                version = '1.0.0'
+            }
+        }
+    }
 }
