@@ -16,5 +16,5 @@
 **Step 2. Add the dependency**
 
     dependencies {
-        implementation 'com.github.JksolCode:CommonSDKLibrary:1.0.0'
+        implementation 'com.github.JksolCode:CommonSDKLibrary:v-1.0.0'
     }
