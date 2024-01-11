@@ -26,7 +26,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus
 import com.yandex.metrica.YandexMetrica
 
 
-class CommonAds {
+public class CommonAds {
     private var adMob: AdMob? = null
     private lateinit var adsConfig: AdsConfig
     private lateinit var context: Application
