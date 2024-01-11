@@ -15,9 +15,9 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import com.ads.control.ads.AperoAd
-import com.ads.control.ads.bannerAds.AperoBannerAdView
-import com.ads.control.ads.wrapper.ApInterstitialAd
+//import com.ads.control.ads.AperoAd
+//import com.ads.control.ads.bannerAds.AperoBannerAdView
+//import com.ads.control.ads.wrapper.ApInterstitialAd
 import com.example.jksolads.R
 import com.example.jksolads.ads.AdsListener
 import com.example.jksolads.ads.AdsLoadListener
@@ -66,9 +66,9 @@ open class AdMob {
         }
     }
 
-    fun setAperoLanguageNativeAd() {
-        AperoAds().mLangNativeAd = null
-    }
+//    fun setAperoLanguageNativeAd() {
+//        AperoAds().mLangNativeAd = null
+//    }
 
 
     fun loadInterstitialAds(
@@ -221,12 +221,12 @@ open class AdMob {
 
     }
 
-    fun getAperoInterstitialAd(
-        activity: Activity?,
-        interstitialAdId: String, adsListener: AdsListener?
-    ): ApInterstitialAd {
-        return AperoAd.getInstance().getInterstitialAds(activity, interstitialAdId)
-    }
+//    fun getAperoInterstitialAd(
+//        activity: Activity?,
+//        interstitialAdId: String, adsListener: AdsListener?
+//    ): ApInterstitialAd {
+//        return AperoAd.getInstance().getInterstitialAds(activity, interstitialAdId)
+//    }
 
     private fun showInterstitialAds(
         activity: Activity?,
@@ -746,55 +746,55 @@ open class AdMob {
         listenerAdapter: AdsLoadListener?
     ) {
 
-        AperoAds.getInstance()!!
-            .loadLanguageNativeAd(activity!!, nativeId, layout!!, listenerAdapter!!)
+//        AperoAds.getInstance()!!
+//            .loadLanguageNativeAd(activity!!, nativeId, layout!!, listenerAdapter!!)
     }
 
-    fun showAperoLanguageNativeAd(
-        activity: Activity?,
-        nativeId: String,
-        layout: Int?,
-        nativeAdView: FrameLayout,
-        shimmerFrameLayout: ShimmerFrameLayout,
-        listenerAdapter: AdsLoadListener?
-    ) {
+//    fun showAperoLanguageNativeAd(
+//        activity: Activity?,
+//        nativeId: String,
+//        layout: Int?,
+//        nativeAdView: FrameLayout,
+//        shimmerFrameLayout: ShimmerFrameLayout,
+//        listenerAdapter: AdsLoadListener?
+//    ) {
+//
+//        AperoAds.getInstance()!!.showLanguageNativeAd(
+//            activity!!,
+//            nativeId,
+//            layout!!,
+//            nativeAdView,
+//            shimmerFrameLayout,
+//            listenerAdapter!!
+//        )
+//    }
 
-        AperoAds.getInstance()!!.showLanguageNativeAd(
-            activity!!,
-            nativeId,
-            layout!!,
-            nativeAdView,
-            shimmerFrameLayout,
-            listenerAdapter!!
-        )
-    }
+//    fun loadAndShowAperoNativeAd(
+//        activity: Activity?,
+//        nativeId: String,
+//        layout: Int?,
+//        nativeAdView: FrameLayout,
+//        shimmerFrameLayout: ShimmerFrameLayout,
+//        listenerAdapter: AdsLoadListener?
+//    ) {
+//
+//        AperoAds.getInstance()!!.loadAndShowNativeAd(
+//            activity!!,
+//            nativeId,
+//            layout!!,
+//            nativeAdView,
+//            shimmerFrameLayout,
+//            listenerAdapter!!
+//        )
+//    }
 
-    fun loadAndShowAperoNativeAd(
-        activity: Activity?,
-        nativeId: String,
-        layout: Int?,
-        nativeAdView: FrameLayout,
-        shimmerFrameLayout: ShimmerFrameLayout,
-        listenerAdapter: AdsLoadListener?
-    ) {
-
-        AperoAds.getInstance()!!.loadAndShowNativeAd(
-            activity!!,
-            nativeId,
-            layout!!,
-            nativeAdView,
-            shimmerFrameLayout,
-            listenerAdapter!!
-        )
-    }
-
-    fun showAperoBannerAd(
-        activity: Activity?,
-        bannerAdId: String?,
-        viewGroup: AperoBannerAdView?,
-        adEventListener: AdsLoadListener?
-
-    ) {
-        AperoAds.getInstance()!!.loadBanner(activity!!, viewGroup!!, adEventListener, bannerAdId!!)
-    }
+//    fun showAperoBannerAd(
+//        activity: Activity?,
+//        bannerAdId: String?,
+//        viewGroup: AperoBannerAdView?,
+//        adEventListener: AdsLoadListener?
+//
+//    ) {
+//        AperoAds.getInstance()!!.loadBanner(activity!!, viewGroup!!, adEventListener, bannerAdId!!)
+//    }
 }

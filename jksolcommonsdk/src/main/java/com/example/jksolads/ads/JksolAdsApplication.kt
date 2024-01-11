@@ -10,9 +10,9 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDexApplication
-import com.ads.control.ads.AperoAd
-import com.ads.control.config.AdjustConfig
-import com.ads.control.config.AperoAdConfig
+//import com.ads.control.ads.AperoAd
+//import com.ads.control.config.AdjustConfig
+//import com.ads.control.config.AperoAdConfig
 import com.example.jksolads.BuildConfig
 import com.example.jksolads.ads.AdMob.AppOpenAdManager
 import com.google.android.gms.ads.MobileAds
@@ -29,15 +29,15 @@ open class JksolAdsApplication : MultiDexApplication(){
     override fun onCreate() {
         super.onCreate()
 
-        val environment =
-            if (BuildConfig.DEBUG) AperoAdConfig.ENVIRONMENT_DEVELOP else AperoAdConfig.ENVIRONMENT_PRODUCTION
-        val aperoAdConfig = AperoAdConfig(this, AperoAdConfig.PROVIDER_ADMOB, environment);
-
-        // Optional: setup Adjust event
-        val adjustConfig = AdjustConfig(true)
-        aperoAdConfig.setAdjustConfig(adjustConfig)
-        aperoAdConfig.setVariant(true)
-        AperoAd.getInstance().init(this, aperoAdConfig, false);
+//        val environment =
+//            if (BuildConfig.DEBUG) AperoAdConfig.ENVIRONMENT_DEVELOP else AperoAdConfig.ENVIRONMENT_PRODUCTION
+//        val aperoAdConfig = AperoAdConfig(this, AperoAdConfig.PROVIDER_ADMOB, environment);
+//
+//        // Optional: setup Adjust event
+//        val adjustConfig = AdjustConfig(true)
+//        aperoAdConfig.setAdjustConfig(adjustConfig)
+//        aperoAdConfig.setVariant(true)
+//        AperoAd.getInstance().init(this, aperoAdConfig, false);
     }
 
 }

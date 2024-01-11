@@ -63,13 +63,13 @@ dependencies {
 
     // AppMetrica SDK.
     implementation 'com.yandex.android:mobmetricalib:5.3.0'
-
-    implementation('com.github.AperoVN:AperoModuleAds:5.5.6-alpha02'){
-        exclude group: 'com.google.android.gms', module: 'play-services-ads'
-        exclude group: 'com.applovin', module: 'play-services-ads'
-        exclude group: 'com.appsflyer'
-        exclude group: 'com.ironsource.sdk'
-    }
+//
+//    implementation('com.github.AperoVN:AperoModuleAds:5.5.6-alpha02'){
+//        exclude group: 'com.google.android.gms', module: 'play-services-ads'
+//        exclude group: 'com.applovin', module: 'play-services-ads'
+//        exclude group: 'com.appsflyer'
+//        exclude group: 'com.ironsource.sdk'
+//    }
 
     implementation 'com.google.android.play:app-update:2.1.0'
 
