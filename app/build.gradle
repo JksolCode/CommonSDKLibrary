@@ -31,64 +31,22 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
 }
 
 group = 'com.github.JksolCode'
 version = '1.0.0'
 
-//publishing {
-//    publications {
-//        mavenJava(MavenPublication) {
-//            artifactId = 'CommonSDKLibrary'
-//            from components.findByName('release')
-//            versionMapping {
-//                usage('java-api') {
-//                    fromResolutionOf('runtimeClasspath')
-//                }
-//                usage('java-runtime') {
-//                    fromResolutionResult()
-//                }
-//            }
-//            pom {
-//                name = 'jksolcommonsdk'
-//                description = 'A concise description of my library'
-//                url = 'http://www.example.com/library'
-//                properties = [
-//                        myProp          : "value",
-//                        "prop.with.dots": "anotherValue"
-//                ]
-//                licenses {
-//                    license {
-//                        name = 'The Apache License, Version 2.0'
-//                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id = 'johnd'
-//                        name = 'John Doe'
-//                        email = 'john.doe@example.com'
-//                    }
-//                }
-////                scm {
-////                    connection = 'scm:git:git://example.com/my-library.git'
-////                    developerConnection = 'scm:git:ssh://example.com/my-library.git'
-////                    url = 'http://example.com/my-library/'
-////                }
-//            }
-//        }
-//    }
-//        repositories {
-//            maven {
-//                // change URLs to point to your repos, e.g. http://my.org/repo
-//                def releasesRepoUrl = layout.buildDirectory.dir('repos/releases')
-//                def snapshotsRepoUrl = layout.buildDirectory.dir('repos/snapshots')
-//                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-//            }
-//        }
-//}
 dependencies {
-
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'

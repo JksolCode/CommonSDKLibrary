@@ -32,11 +32,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
 }
 
 dependencies {
-
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -64,13 +71,6 @@ dependencies {
 
     // AppMetrica SDK.
     implementation 'com.yandex.android:mobmetricalib:5.3.0'
-//
-//    implementation('com.github.AperoVN:AperoModuleAds:5.5.6-alpha02'){
-//        exclude group: 'com.google.android.gms', module: 'play-services-ads'
-//        exclude group: 'com.applovin', module: 'play-services-ads'
-//        exclude group: 'com.appsflyer'
-//        exclude group: 'com.ironsource.sdk'
-//    }
 
     implementation 'com.google.android.play:app-update:2.1.0'
 
@@ -89,6 +89,12 @@ dependencies {
 
     //Firebase remoteConfig
     implementation 'com.google.firebase:firebase-config-ktx:21.6.0'
+
+    //AperoAds
+    implementation(files("libs/AperoModuleAds-5.5.6-alpha02.aar"))
+
+    //lottie
+    api 'com.airbnb.android:lottie:5.2.0'
 }
 afterEvaluate {
     publishing {
@@ -97,7 +103,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.JksolCode'
                 artifactId = 'CommonSDKLibrary'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }

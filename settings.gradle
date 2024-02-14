@@ -5,6 +5,12 @@ pluginManagement {
         gradlePluginPortal()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url "https://maven.google.com"
+        }
+        flatDir {
+            dirs("libs")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -15,6 +21,12 @@ dependencyResolutionManagement {
         gradlePluginPortal()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url "https://maven.google.com"
+        }
+        flatDir {
+            dirs("libs")
+        }
     }
 }
 rootProject.name = "JkSolCommonAdsSDK"
