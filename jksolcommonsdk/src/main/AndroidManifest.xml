@@ -3,6 +3,8 @@
     package="com.example.jksolads"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application>
 
         <meta-data
