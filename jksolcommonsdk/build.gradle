@@ -95,7 +95,7 @@ dependencies {
     api 'com.airbnb.android:lottie:5.2.0'
 
     //AperoAds
-    implementation project(":ThirdPartyAds")
+    api project(":ThirdPartyAds")
 }
 afterEvaluate {
     publishing {
