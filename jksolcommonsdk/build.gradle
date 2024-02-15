@@ -103,7 +103,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.JksolCode'
                 artifactId = 'CommonSDKLibrary'
-                version = 'v-1.0.1'
+                version = 'v-1.0.2'
             }
         }
     }
