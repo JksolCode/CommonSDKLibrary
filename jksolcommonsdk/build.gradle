@@ -104,7 +104,8 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.JksolCode'
                 artifactId = 'CommonSDKLibrary'
-                version = 'v-1.0.3'
+                version = 'v-1.0.5'
+                artifact("AperoModuleAds.aar")
             }
         }
     }
